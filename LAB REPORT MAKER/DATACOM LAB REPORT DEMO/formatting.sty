@@ -1,0 +1,225 @@
+%-------------------------------------------------------
+% "formatting.sty" contains global document formatting
+% ... that mimics the UCLA GIRS Microsft Word template
+% ... circa January 2021 version
+
+% This STY file contains the following:
+% 0. general package imports
+% 1. set page dimensions
+% 2. set paragraph dimensions
+% 3. set Calibri-like font
+% 4. format headers
+% 5. format figure and table captions
+% 6. format lists (itemize & enumerate)
+% 7. set-up frontmatter, mainmatter, backmatter
+% 8. specify gap between text and figure/table
+% 9. table cell justification using array package
+% 10. format landscape pages
+% 11. format references fonts, etc.
+% 12. format TOC
+% 13. format list of figures (LOF) & list of tables (LOT)
+% 14. format hyphenation and right margins
+
+
+%-------------------------------------------------------
+% 0. general package imports
+
+\usepackage[utf8]{inputenc}
+\usepackage{nameref}
+\usepackage{mathtools}
+\usepackage{amsmath, amsthm, amssymb, amsfonts}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{threeparttable}
+\usepackage{subcaption}
+\usepackage{appendix}
+\usepackage[round,sort]{natbib}
+\usepackage[affil-sl,auth-sc]{authblk}
+
+\usepackage{lipsum} % only used for dummy text
+
+
+%-------------------------------------------------------
+% specific package imports with template formatting:
+
+% 1. set page dimensions
+\usepackage[letterpaper, margin=1in]{geometry}
+
+% 2. set paragraph dimensions
+\setlength{\parindent}{0.5in}
+\setlength{\parskip}{6pt}
+
+% 3. set Calibri-like font
+\usepackage[sfdefault]{carlito}
+
+% 4. format headers
+\usepackage{titlesec}
+
+\newcommand{\chapterjustification}{}
+\newcommand{\chapterfont}{\normalfont}
+\newcommand{\chapterfontsize}{\fontsize{22pt}{22pt}\selectfont}
+
+\titleformat{\chapter}%
+    {\chapterjustification\chapterfont\chapterfontsize\bfseries\MakeUppercase}%
+    {\thechapter}{0.5in}{}
+\titlespacing*{\chapter}{0pt}{80pt}{40pt}
+
+\titleformat{\section}%
+    {\normalfont\fontsize{14pt}{14pt}\selectfont\bfseries\MakeUppercase}%
+    {\thesection}{0.5in}{}
+\titlespacing*{\section}{0pt}{24pt}{12pt}
+
+\titleformat{\subsection}%
+    {\normalfont\fontsize{14pt}{14pt}\selectfont\bfseries}%
+    {\thesubsection}{0.5in}{}
+\titlespacing*{\subsection}{0pt}{18pt}{12pt}
+
+% 5. format figure and table captions
+\usepackage{caption}
+\DeclareCaptionFont{capfnt}{\fontsize{11pt}{11pt}\selectfont #1}
+\captionsetup{labelsep=period, singlelinecheck=false,%
+    labelfont=bf, margin={0.25in, 0.3in}, skip=12pt,%
+    font=capfnt, format=hang}
+
+% 6. format lists (itemize & enumerate)
+\usepackage[inline]{enumitem}
+\setlist[enumerate]{left = 0.25in, labelsep = 0.25in, parsep=6pt}
+\setlist[itemize]{left = 0.25in, labelsep = 0.25in, parsep=6pt}
+
+% 7. set-up frontmatter, mainmatter, backmatter
+\makeatletter
+\newcommand\frontmatter{
+    \cleardoublepage
+    \pagenumbering{roman}}
+\newcommand\mainmatter{
+    \cleardoublepage
+    \pagenumbering{arabic}}
+\newcommand\backmatter{
+    \if@openright
+        \cleardoublepage
+    \else
+        \clearpage
+    \fi
+}
+\makeatother
+
+% 8. specify gap between text and figure/table
+\setlength{\intextsep}{24pt}
+
+% 9. table cell justification using array package
+\usepackage{array}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+
+% 10. format landscape pages
+\usepackage{pdflscape}
+
+\def\fillandplacepagenumber{%
+    \par\pagestyle{empty}%
+    \vbox to 0pt{\vss}\vfill
+    \vbox to 0pt{\baselineskip0pt
+        \hbox to\linewidth{\hss}%
+        \baselineskip\footskip
+        \hbox to\linewidth{%
+            \hfil\thepage\hfil}\vss}}
+
+% 11. format references fonts, etc.
+\usepackage{etoolbox}
+\AtBeginEnvironment{thebibliography}{%
+  \titleformat{\chapter}%
+    {\normalfont\fontsize{14pt}{14pt}\bfseries\filcenter}%
+    {\thechapter}{0.5in}{\MakeUppercase}%
+    \titlespacing*{\chapter}{0pt}{0pt}{12pt}
+}
+
+% % % Begin Alternative 1
+\renewcommand{\bibname}{References}
+\AddToHook{cmd/bibsection/after}{%
+  \addcontentsline{toc}{chapter}{\bibname}%
+}
+% % % End Alternative 1
+
+% % % % Begin Alternative 2
+% % use this if Alternative 1 produces error
+% \renewcommand{\bibname}{References}
+% \appto{\bibsection}{%
+%   \addcontentsline{toc}{chapter}{\bibname}%
+% }
+% % % % End Alternative 2
+
+\def\bibfont{\fontsize{11pt}{0pt}\selectfont\hyphenpenalty=10000}
+
+% 12. format TOC
+\usepackage{titletoc}
+
+\contentsmargin{0.2in} % space between dots and page num
+
+\newcommand{\chapterprefix}{}
+
+\titlecontents{chapter}[0.5in]{%
+    \addvspace{12pt}\bfseries}{%
+    \chapterprefix\contentslabel{0.5in}\MakeUppercase}{%
+    \hspace*{-0.5in}\MakeUppercase}{%
+    \titlerule*[0.5pc]{.}\contentspage} % dot density
+
+\titlecontents{section}[1in]{\bfseries}{%
+    \contentslabel{0.5in}\MakeUppercase}{%
+    \hspace*{-1in}\MakeUppercase}{%
+    \titlerule*[0.5pc]{.}\contentspage}
+    
+\titlecontents{subsection}[1.5in]{\selectfont}{%
+    \contentslabel{0.5in}}{%
+    \hspace*{-1in}}{%
+    \titlerule*[0.5pc]{.}\contentspage}
+
+\newcommand{\insertTOC}{\begingroup
+    \cleardoublepage
+    \addcontentsline{toc}{chapter}{Contents}
+    \renewcommand{\chapterjustification}{\centering}
+    \renewcommand{\chapterfontsize}{\fontsize{16pt}{0pt}\selectfont}
+    \titlespacing*{\chapter}{0pt}{0pt}{24pt}
+    \tableofcontents
+    \endgroup}
+
+% 13. format list of figures (LOF) & list of tables (LOT)
+\newcommand{\insertLOF}{\begingroup
+    \cleardoublepage
+    \addcontentsline{toc}{chapter}{List of Figures}
+    \renewcommand{\chapterjustification}{\centering}
+    \renewcommand{\chapterfontsize}{\fontsize{16pt}{16pt}\selectfont}
+    \titlespacing*{\chapter}{0pt}{0pt}{24pt}
+    {\let\oldnumberline\numberline %
+        \renewcommand{\numberline}{\figurename~\oldnumberline} %
+        \listoffigures}
+    \endgroup}
+
+\newcommand{\insertLOT}{\begingroup
+    \cleardoublepage
+    \addcontentsline{toc}{chapter}{List of Tables}
+    \renewcommand{\chapterjustification}{\centering}
+    \renewcommand{\chapterfontsize}{\fontsize{16pt}{16pt}\selectfont}
+    \titlespacing*{\chapter}{0pt}{0pt}{24pt}
+    {\let\oldnumberline\numberline %
+        \renewcommand{\numberline}{\tablename~\oldnumberline} %
+        \listoftables}
+    \endgroup}
+
+% 14. format hyphenation and right margins
+\global\hyphenpenalty=100000
+\emergencystretch 3em
+
+%-------------------------------------------------------
+% misc. notes on formatting
+
+% \fontsize{10}{12}
+% the first number is the pt size of the font
+% the second number the space in pts between lines
+
+% \titlespacing*
+% the asterisk removes indentation of 1st paragraph
+
+% misc notes on title formatting
+% https://www.overleaf.com/learn/latex/Sections_and_chapters
+
+% \usepackage[inline]{enumitem} 
+% allows for inline enumerate, use instead of \usepackage{enumitem}

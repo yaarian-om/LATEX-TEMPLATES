@@ -1,0 +1,137 @@
+\chapter{Abstract}
+\label{ch:abstract}
+\lipsum[1] % dummy text
+\chapter{Introduction}
+\label{ch:intro}
+
+%-------------------------------------------------------
+
+\lipsum[1] % dummy text
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% SUBSECTION NAME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{first subsection}
+Text here should be 12 pt font. Times new Roman not required. No indentation in first paragraph of each section, but indent 0.5 inch at the start of each subsequent paragraph.
+
+\lipsum[1] % dummy text
+
+\begin{enumerate}
+    \item Bulleted lists should have the number or bullet at 0.25 inch and the text starting at 0.5 inch
+    \item All text should have at least 16 pt line spacing
+    \item Use 6 pt spacing above and below paragraphs.
+    \item Apply full justification of paragraphs.
+    \item \lipsum[1]  % dummy text
+\end{enumerate}
+
+Here is a bulleted list (itemize) in the same format as a numbered list (enumerate):
+
+\begin{itemize}
+    \item Item 1
+    \item Item 2
+    \item Item 3
+\end{itemize}
+
+Here is an example equation (see Equation \ref{eq:ex}):
+\begin{equation}
+    a + b = c
+    \label{eq:ex}
+\end{equation}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% SUBSECTION NAME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{second subsection}
+Text goes here. See Figure \ref{fig:exA}.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 0.5\textwidth]{example-image-a}
+    \caption[Short figure description for the table of contents.]%
+    {A much longer figure description, one that is far too long for the table of contents snippet. Use Calibri 11 pt bold for Figure X.X text and Table X.X text. Remaining caption text not bold. Figure captions go below figures, table captions go above tables.}
+    \label{fig:exA}
+\end{figure}
+
+And here is an example table (Table \ref{table:ex}). \textbf{Users of this template will have to be mindful of the table formatting.} This example uses the \emph{booktabs} package
+(\href{https://ctan.org/pkg/booktabs?lang=en}{see online documentation}) to format the lines for the table. Users may use their preferred packages for table management, provided the formatting is maintained.
+Note that
+\begin {enumerate*}[label=(\roman*)]
+\item top and bottom horizontal lines are thick (1.5pt);
+\item double horizontal lines below header row; and
+\item thin horizontal lines (0.5pt) between internal rows and columns.
+\end {enumerate*}
+This example also uses the \emph{threeparttable} package
+(\href{https://ctan.org/pkg/threeparttable?lang=en}{see online documentation}) to format the footnote for the table, and the \emph{array} package
+(\href{https://ctan.org/pkg/array?lang=en}{see online documentation}) to format the cell justification (also see the \emph{formatting.sty} file, \#9).
+
+\begin{table}[h]
+    \begin{threeparttable}
+        \centering
+        \caption[Short table description for the table of contents.]%
+        {A much longer table description, one that is too long for the table of contents snippet. Example of a table that includes footnotes. Note that table font different from that in the main text – non bold Calibri.}
+
+        \begin{tabular}{P{1.4in}|c|C{1.2in}|c|c|P{1.35in}}
+            \specialrule{1.5pt}{0pt}{0pt}
+            Reference                   & \textbf{M} range   & $R_{rup}$ or $R_{hyp}$ range (km) & N events & N recs & Event-types distinguished? \\
+            \hline\hline
+            \citealt{crouse1988}\tnote{1}
+                                        & 5.1\textendash 8.2 & 28\textendash 470                 & 84       & 129    & No                         \\
+            \specialrule{0.5pt}{0pt}{0pt}
+            \citealt{youngs1997}        & 5.0\textendash 8.2 & 8.5\textendash 550                & 160      & 474    & Yes; interface, intraslab  \\
+            \specialrule{0.5pt}{0pt}{0pt}
+            \citealt{atkinsonboore2003} & 5.5\textendash 8.3 & 10\textendash 400                 & 77       & 1148   & Yes; interface, intraslab  \\
+            \specialrule{0.5pt}{0pt}{0pt}
+            \citealt{abrahamson2016}    & 5.0\textendash 8.4 & 13\textendash 3070                & 292      & 9946   & Yes; interface, intraslab  \\
+            \specialrule{1.5pt}{0pt}{0pt}
+        \end{tabular}
+
+        \begin{tablenotes}\footnotesize
+            \item[1] The database from Crouse et al. (1988) was subsequently updated for the development of a GMPE by Crouse (1991), but event details for the latter were not presented and hence are not shown in Table 1.1. The expanded Crouse (1991) database was used subsequently by Youngs et al. (1997)
+        \end{tablenotes}
+        \label{table:ex}
+
+    \end{threeparttable}
+\end{table}
+
+
+\subsection{2nd Level Subsection}
+Subsection text is also not indented in the first paragraph, but is intended for subsequent paragraphs.
+
+\lipsum[1] % dummy text
+
+Figure \ref{fig:ex2} is an example figure for subplots, and you can reference a specific subplot like Figure \ref{fig:ex2a}. It is set up in landscape page format
+
+
+\begin{landscape}
+    \begin{figure}
+        \centering
+        \begin{subfigure}{0.3\linewidth}
+            \centering
+            \includegraphics[width=\textwidth]{example-image-a}
+            \caption{Optional subcaption}
+            \label{fig:ex2a}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}{0.3\linewidth}
+            \centering
+            \includegraphics[width=\textwidth]{example-image-b}
+            \caption{}
+            \label{fig:ex2b}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}{0.3\linewidth}
+            \centering
+            \includegraphics[width=\textwidth]{example-image-c}
+            \label{fig:ex2c}
+        \end{subfigure}
+        \caption[Short figure description for the table of contents.]%
+        {A much longer figure description, one that is too long for the table of contents snippet. This example uses subfigures on a landscape layout. (a) You can give an optional subcaption. (b) Omit the subcaption and just use this main caption for text. (right) You can omit the a/b/c labels and use left/middle/right descriptions in this main caption.}
+        \label{fig:ex2}
+    \end{figure}
+    \fillandplacepagenumber % defined in \emph{formatting.sty} file, #10
+\end{landscape}
+
+

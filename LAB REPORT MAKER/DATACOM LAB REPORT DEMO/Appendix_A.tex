@@ -1,0 +1,40 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% APPENDIX TITLE PAGE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+    \vspace*{60pt}
+
+    {\fontsize{18pt}{0pt} \MakeUppercase{\textbf{%
+                Appendix A
+                % authors please fill in above 
+            }}}
+    \vspace*{24pt}
+
+    {\fontsize{18pt}{0pt} \MakeUppercase{\textbf{%
+                The title of the appendix
+                % authors please fill in above 
+            }}}
+
+    \vspace*{100pt}
+\end{center}
+\thispagestyle{empty}
+\appendix
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
+\addtocontents{toc}{\protect\renewcommand{%
+        \protect\chapterprefix}{%
+        \protect\hspace*{-0.5in}APPENDIX\protect\hspace*{0.6in}}}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% APPENDIX CONTENTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{The title of the appendix}
+
+The appendix should be formatted the same as the chapters.
+
+\section{first section}
+
+\lipsum[1] % dummy text
+
+

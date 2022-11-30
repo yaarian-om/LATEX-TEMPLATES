@@ -1,0 +1,52 @@
+\documentclass[12pt]{report}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+% import and apply GIRS "formatting.sty" file
+\usepackage{import}
+\usepackage{formatting}
+\captionsetup{justification=centering}
+
+% load hyperref last to minimize conflicts
+\usepackage{xcolor}
+\usepackage[linktocpage=true]{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue}
+
+%-------------------------------------------------------
+\begin{document}
+
+%-------------------------------------------------------
+\frontmatter
+\include{Title}
+\phantomsection
+% \include{Abstract}
+\phantomsection
+% \include{Acknowledgments}
+
+\phantomsection
+\insertTOC
+\setcounter{tocdepth}{2}
+
+\phantomsection
+\insertLOF
+
+% \phantomsection
+% \insertLOT
+
+%-------------------------------------------------------
+\mainmatter
+\include{Chapter_01}
+
+%-------------------------------------------------------
+% \backmatter
+% \bibliographystyle{ascelike}
+% \bibliography{references}
+
+% \begin{appendices}
+%     \include{Appendix_A}
+% \end{appendices}
+
+
+\end{document}
+%-------------------------------------------------------
