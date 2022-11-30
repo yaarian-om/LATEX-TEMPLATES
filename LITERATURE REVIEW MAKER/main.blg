@@ -1,0 +1,21 @@
+[0] Config.pm:306> INFO - This is Biber 2.18
+[0] Config.pm:309> INFO - Logfile is 'main.blg'
+[202] biber-MSWIN64:340> INFO - === 
+[273] Biber.pm:418> INFO - Reading 'main.bcf'
+[402] Biber.pm:978> INFO - Found 7 citekeys in bib section 0
+[420] Biber.pm:4401> INFO - Processing section 0
+[443] Biber.pm:4592> INFO - Looking for bibtex file 'mybibliography.bib' for section 0
+[514] bibtex.pm:1713> INFO - LaTeX decoding ...
+[521] bibtex.pm:1518> INFO - Found BibTeX data source 'mybibliography.bib'
+[603] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[603] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[603] Biber.pm:4221> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[603] Biber.pm:4227> INFO - No sort tailoring available for locale 'en-US'
+[607] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[610] bbl.pm:757> INFO - Output to main.bbl
+[610] Biber.pm:130> WARN - I didn't find a database entry for 'r3' (section 0)
+[610] Biber.pm:130> WARN - I didn't find a database entry for 'r4' (section 0)
+[610] Biber.pm:130> WARN - I didn't find a database entry for 'r5' (section 0)
+[610] Biber.pm:130> WARN - I didn't find a database entry for 'r6' (section 0)
+[610] Biber.pm:130> WARN - I didn't find a database entry for 'r7' (section 0)
+[610] Biber.pm:132> INFO - WARNINGS: 5

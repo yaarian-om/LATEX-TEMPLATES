@@ -1,0 +1,138 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{r1}{article}{}
+      \name{author}{7}{}{%
+        {{hash=a69d3e08a978a38c14b7717976c4d763}{%
+           family={Dey},
+           familyi={D\bibinitperiod},
+           given={Samrat\bibnamedelima Kumar},
+           giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=26935fd136ec2f6d6beeaf8fa2a267e0}{%
+           family={Rahman},
+           familyi={R\bibinitperiod},
+           given={Md\bibnamedelima Mahbubur},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=adceebde1a762ba48872d73f494cfd68}{%
+           family={Howlader},
+           familyi={H\bibinitperiod},
+           given={Arpita},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4259120018c78afa1547d7b5331e2896}{%
+           family={Siddiqi},
+           familyi={S\bibinitperiod},
+           given={Umme\bibnamedelima Raihan},
+           giveni={U\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=8e120d80db549bb053156de96836fb6c}{%
+           family={Uddin},
+           familyi={U\bibinitperiod},
+           given={Khandaker\bibnamedelimb Mohammad\bibnamedelima Mohi},
+           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=4615dd35e524f4a20d971cd3b9bf3a9a}{%
+           family={Borhan},
+           familyi={B\bibinitperiod},
+           given={Rownak},
+           giveni={R\bibinitperiod}}}%
+        {{hash=a6496063daa3d0972abb09fbe4d38701}{%
+           family={Rahman},
+           familyi={R\bibinitperiod},
+           given={Elias\bibnamedelima Ur},
+           giveni={E\bibinitperiod\bibinitdelim U\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Public Library of Science San Francisco, CA USA}%
+      }
+      \strng{namehash}{23f9826cee84478ba75140a62424d1e1}
+      \strng{fullhash}{d059cec065417511f34bc481a0c0c99e}
+      \strng{bibnamehash}{23f9826cee84478ba75140a62424d1e1}
+      \strng{authorbibnamehash}{23f9826cee84478ba75140a62424d1e1}
+      \strng{authornamehash}{23f9826cee84478ba75140a62424d1e1}
+      \strng{authorfullhash}{d059cec065417511f34bc481a0c0c99e}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{PloS one}
+      \field{number}{7}
+      \field{title}{Prediction of dengue incidents using hospitalized patients, metrological and socio-economic data in Bangladesh: A machine learning approach}
+      \field{volume}{17}
+      \field{year}{2022}
+      \field{pages}{e0270933}
+      \range{pages}{-1}
+    \endentry
+    \entry{r2}{article}{}
+      \name{author}{5}{}{%
+        {{hash=aafd4304f18d0a8ab6d7bdc9e8ffca54}{%
+           family={Ismail},
+           familyi={I\bibinitperiod},
+           given={Suzilah},
+           giveni={S\bibinitperiod}}}%
+        {{hash=b96d7f98a1d4b6d697ab00d4ef04ab9a}{%
+           family={Fildes},
+           familyi={F\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=bf603dd38c46f6d9461f9485770c6464}{%
+           family={Ahmad},
+           familyi={A\bibinitperiod},
+           given={Rohani},
+           giveni={R\bibinitperiod}}}%
+        {{hash=a16a2e4449eaad35fe133e109333ec3c}{%
+           family={Ali},
+           familyi={A\bibinitperiod},
+           given={Wan\bibnamedelimb Najdah\bibnamedelimb Wan\bibnamedelima Mohamad},
+           giveni={W\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim W\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=fb7f7f4a4c64d006c54757a2e4e65cdd}{%
+           family={Omar},
+           familyi={O\bibinitperiod},
+           given={Topek},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{c5aac4682bffbe1398550564518591e2}
+      \strng{fullhash}{37c77ce5dae84a660ffacd51ec731321}
+      \strng{bibnamehash}{c5aac4682bffbe1398550564518591e2}
+      \strng{authorbibnamehash}{c5aac4682bffbe1398550564518591e2}
+      \strng{authornamehash}{c5aac4682bffbe1398550564518591e2}
+      \strng{authorfullhash}{37c77ce5dae84a660ffacd51ec731321}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Infectious Disease Modelling}
+      \field{number}{3}
+      \field{title}{The practicality of Malaysia dengue outbreak forecasting model as an early warning system}
+      \field{volume}{7}
+      \field{year}{2022}
+      \field{pages}{510\bibrangedash 525}
+      \range{pages}{16}
+    \endentry
+  \enddatalist
+  \missing{r3}
+  \missing{r4}
+  \missing{r5}
+  \missing{r6}
+  \missing{r7}
+\endrefsection
+\endinput
+
